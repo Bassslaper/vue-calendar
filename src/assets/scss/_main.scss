@@ -1,0 +1,46 @@
+html {
+  font-size: 10px;
+  height: 100%;
+}
+body {
+  height: 100%;
+  font-family: 'Helvetica Neue Cyr', sans-serif;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  background-color: $bg-color;
+}
+
+.custom-button {
+  @include custom-base-btn;
+
+  &__primary {
+    @include custom-color-btn($custom-button-primary, $custom-primary-shadow);
+  }
+
+  &__danger {
+    @include custom-color-btn($custom-button-danger, $custom-danger-shadow)
+  }
+
+  &__success {
+    @include custom-color-btn($custom-button-success, $custom-success-shadow)
+  }
+}
+
+.custom-input {
+  background: #FFFFFF;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
+  width: 100%;
+
+  &::placeholder {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #828282;
+  }
+}
